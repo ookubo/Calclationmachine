@@ -142,7 +142,7 @@ double s=0;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
             y=0;
-            keisan=1;
+            keisan=0;
             break;
             
         case 2:
@@ -150,7 +150,7 @@ double s=0;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
             y=0;
-            keisan=1;
+            keisan=0;
         break;
             
         case 3:
@@ -158,7 +158,7 @@ double s=0;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
             y=0;
-            keisan=1;
+            keisan=0;
         break;
             
         case 4:
@@ -166,152 +166,133 @@ double s=0;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
             y=0;
-            keisan=1;
+            keisan=0;
         break;
     }
 }
 
 - (IBAction)nine:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+9;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+9;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];            break;
     }
 }
 
 - (IBAction)eight:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+8;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+8;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];         break;
     }
 }
 
 - (IBAction)seven:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+7;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+7;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)six:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+6;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+6;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)five:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+5;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+5;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)four:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+4;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+4;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)three:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+3;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+3;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)two:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+2;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+2;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)one:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10+1;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10+1;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)zero:(id)sender {
-    switch ([self state]) {
+    switch (keisan) {
         case 0:
             x=x*10;
-            [self setState:0];
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             
         case 1:
             y=y*10;
-            [self setState:1];
             [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
     }
 }
 
 - (IBAction)dot:(id)sender {
+    
 }
 
 
