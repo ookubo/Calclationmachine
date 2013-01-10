@@ -35,6 +35,7 @@ int answear;
 int keisan=0;
 double w=0;
 double s=0;
+double r=0;
 
 
 - (IBAction)AC:(id)sender {
@@ -47,6 +48,7 @@ double s=0;
     keisan=0;
     w=0;
     s=0;
+    r=0;
             [[self screen] setText:[NSString stringWithFormat:@"%d",0]];
 
 }
@@ -270,12 +272,34 @@ double s=0;
 - (IBAction)one:(id)sender {
     switch (keisan) {
         case 0:
+            if(shou == 0){
             x=x*10+1;
             [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
+            }
+            
+            else if(shou == 1){
+                w=x*pow(10,(-n));
+                s=w+x;
+                [[self screen] setText:[NSString stringWithFormat:@"%g",s]];
+                x=s;
+                n=n+1;
+            }
             
         case 1:
+            if(shou == 0){
             y=y*10+1;
-            [[self screen] setText:[NSString stringWithFormat:@"%g",y]];             break;
+            [[self screen] setText:[NSString stringWithFormat:@"%g",y]];
+            }
+            
+            else if(shou == 1){
+                w=y*pow(10,(-n));
+                r=w+y;
+                [[self screen] setText:[NSString stringWithFormat:@"%g",r]];
+                y=r;
+                n=n+1;
+            }
+            
+                break;
     }
 }
 
@@ -292,7 +316,22 @@ double s=0;
 }
 
 - (IBAction)dot:(id)sender {
-    
+    shou=1;
+    /*switch (keisan){
+        case 0:
+            w=x*pow(10,(-n));
+            s=w+x;
+            [[self screen] setText:[NSString stringWithFormat:@"%g",s]];
+            x=s;
+            n=n+1;
+            
+        case 1:
+            w=y*pow(10,(-n));
+            r=w+y;
+            [[self screen] setText:[NSString stringWithFormat:@"%g",r]];
+            y=r;
+            n=n+1;
+    }*/
 }
 
 

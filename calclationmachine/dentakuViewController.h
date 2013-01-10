@@ -18,6 +18,7 @@
     int keisan;
     double w;
     double s;
+    double r;
 }
 @property (weak, nonatomic) IBOutlet UITextField *screen;
 @property enum{x,y} state;
