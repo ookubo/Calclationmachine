@@ -38,7 +38,7 @@ double s=0;
 double r=0;
 
 
-- (IBAction)AC:(id)sender {
+- (IBAction)AC:(id)sender { //ACボタン：すべての変数を初期化する
     x=0;
     y=0;
     z=0;
@@ -53,8 +53,8 @@ double r=0;
 
 }
 
-- (IBAction)minas:(id)sender {
-    if(keisan==0){
+- (IBAction)minas:(id)sender { //マイナスの演算プログラム
+    if(keisan==0){ //一番最初にマイナス演算を押したとき
         keisan=1;
         n=1;
         shou=0;
@@ -62,7 +62,7 @@ double r=0;
         answear=2;
         y=0;
     }
-    else{
+    else{ //一回以上演算をしていたとき
         keisan=1;
         n=1;
         shou=0;
@@ -74,7 +74,7 @@ double r=0;
     }
 }
 
-- (IBAction)kake:(id)sender {
+- (IBAction)kake:(id)sender { //掛ける演算
     if(keisan==0){
         keisan=1;
         n=1;
@@ -95,7 +95,7 @@ double r=0;
     }
 }
 
-- (IBAction)waru:(id)sender {
+- (IBAction)waru:(id)sender { //割る演算プログラム
     if(keisan==0){
         keisan=1;
         n=1;
@@ -116,7 +116,7 @@ double r=0;
     }
 }
 
-- (IBAction)plus:(id)sender {
+- (IBAction)plus:(id)sender { //足す演算プログラム
     if(keisan==0){
         keisan=1;
         n=1;
@@ -137,9 +137,9 @@ double r=0;
     }
 }
 
-- (IBAction)equal:(id)sender {
+- (IBAction)equal:(id)sender { //計算結果を出す
     switch(answear){
-        case 1:
+        case 1: //足し算の場合
             z=x+y;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
@@ -147,7 +147,7 @@ double r=0;
             keisan=0;
             break;
             
-        case 2:
+        case 2: //引き算の場合
             z=x-y;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
@@ -155,7 +155,7 @@ double r=0;
             keisan=0;
         break;
             
-        case 3:
+        case 3: //かけ算の場合
             z=x*y;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
@@ -163,7 +163,7 @@ double r=0;
             keisan=0;
         break;
             
-        case 4:
+        case 4: //割り算の場合
             z=x/y;
             [[self screen] setText:[NSString stringWithFormat:@"%g",z]];
             x=z;
@@ -173,24 +173,24 @@ double r=0;
     }
 }
 
-- (IBAction)nine:(id)sender {
+- (IBAction)nine:(id)sender { //9のボタンを押したときの操作
     switch (keisan) {
-        case 0:
-            if(shou == 0){
-                x=x*10+9;
+        case 0: //演算子を押す前の値の入力
+            if(shou == 0){ //小数点を押していないとき
+                x=x*10+9; //元の数を十倍してその値を足す
                 [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
             }
             
-            else if(shou == 1){
-                w=9*pow(10,(-n));
-                s=w+x;
+            else if(shou == 1){ //小数点を押しているとき
+                w=9*pow(10,(-n)); //押した値を１０分の１する
+                s=w+x; //１０分の１した値をもとの値に足す
                 [[self screen] setText:[NSString stringWithFormat:@"%g",s]];
                 x=s;
                 n=n+1;
             }
             break;
             
-        case 1:
+        case 1: //演算子を押した後の値の入力
             if(shou == 0){
                 y=y*10+9;
                 [[self screen] setText:[NSString stringWithFormat:@"%g",y]];
@@ -208,7 +208,7 @@ double r=0;
     }
 }
 
-- (IBAction)eight:(id)sender {
+- (IBAction)eight:(id)sender { //8を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -243,7 +243,7 @@ double r=0;
     }
 }
 
-- (IBAction)seven:(id)sender {
+- (IBAction)seven:(id)sender { //7を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -278,7 +278,7 @@ double r=0;
     }
 }
 
-- (IBAction)six:(id)sender {
+- (IBAction)six:(id)sender { //6を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -313,7 +313,7 @@ double r=0;
     }
 }
 
-- (IBAction)five:(id)sender {
+- (IBAction)five:(id)sender { //5を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -348,7 +348,7 @@ double r=0;
     }
 }
 
-- (IBAction)four:(id)sender {
+- (IBAction)four:(id)sender { //4を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -383,7 +383,7 @@ double r=0;
     }
 }
 
-- (IBAction)three:(id)sender {
+- (IBAction)three:(id)sender { //3を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -418,7 +418,7 @@ double r=0;
     }
 }
 
-- (IBAction)two:(id)sender {
+- (IBAction)two:(id)sender { //2を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -453,7 +453,7 @@ double r=0;
     }
 }
 
-- (IBAction)one:(id)sender {
+- (IBAction)one:(id)sender { //1を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -488,7 +488,7 @@ double r=0;
     }
 }
 
-- (IBAction)zero:(id)sender {
+- (IBAction)zero:(id)sender { //0を押したときの操作
     switch (keisan) {
         case 0:
             if(shou == 0){
@@ -523,8 +523,10 @@ double r=0;
     }
 }
 
-- (IBAction)dot:(id)sender {
-    shou=1;
+- (IBAction)dot:(id)sender { //小数点を押したときの操作
+    shou=1; //shou変数を１にする
+    [[self screen] setText:[NSString stringWithFormat:@"."]];
+    
     /*switch (keisan){
         case 0:
             w=x*pow(10,(-n));
