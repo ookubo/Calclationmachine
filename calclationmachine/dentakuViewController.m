@@ -55,11 +55,11 @@ double r=0;
 
 - (IBAction)minas:(id)sender { //マイナスの演算プログラム
     if(keisan==0){ //一番最初にマイナス演算を押したとき
-        keisan=1;
+        keisan=1; //入力したxの値を読み込む
         n=1;
         shou=0;
         [[self screen] setText:[NSString stringWithFormat:@"%g",x]];
-        answear=2;
+        answear=2; //equalの演算プログラムをanswearが2にスイッチする
         y=0;
     }
     else{ //一回以上演算をしていたとき
