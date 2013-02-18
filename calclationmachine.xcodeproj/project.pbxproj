@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB42A1C916D1D5A0007C0653 /* StateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = CB42A1C816D1D5A0007C0653 /* StateMachine.m */; };
 		CB65E33316366B9500814A56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB65E33216366B9500814A56 /* UIKit.framework */; };
 		CB65E33516366B9500814A56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB65E33416366B9500814A56 /* Foundation.framework */; };
 		CB65E33716366B9500814A56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB65E33616366B9500814A56 /* CoreGraphics.framework */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB42A1C716D1D5A0007C0653 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateMachine.h; sourceTree = "<group>"; };
+		CB42A1C816D1D5A0007C0653 /* StateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateMachine.m; sourceTree = "<group>"; };
 		CB65E32E16366B9500814A56 /* calclationmachine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calclationmachine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB65E33216366B9500814A56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CB65E33416366B9500814A56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,6 +123,8 @@
 				CB65E34116366B9500814A56 /* dentakuAppDelegate.h */,
 				CB65E34216366B9500814A56 /* dentakuAppDelegate.m */,
 				CB65E34A16366B9500814A56 /* MainStoryboard.storyboard */,
+				CB42A1C716D1D5A0007C0653 /* StateMachine.h */,
+				CB42A1C816D1D5A0007C0653 /* StateMachine.m */,
 				CB65E34D16366B9500814A56 /* dentakuViewController.h */,
 				CB65E34E16366B9500814A56 /* dentakuViewController.m */,
 				CB65E33916366B9500814A56 /* Supporting Files */,
@@ -274,6 +279,7 @@
 				CB65E33F16366B9500814A56 /* main.m in Sources */,
 				CB65E34316366B9500814A56 /* dentakuAppDelegate.m in Sources */,
 				CB65E34F16366B9500814A56 /* dentakuViewController.m in Sources */,
+				CB42A1C916D1D5A0007C0653 /* StateMachine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +453,7 @@
 				CB65E36916366B9500814A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB65E36A16366B9500814A56 /* Build configuration list for PBXNativeTarget "calclationmachineTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +462,7 @@
 				CB65E36C16366B9500814A56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

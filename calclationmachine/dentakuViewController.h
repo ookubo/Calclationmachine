@@ -7,38 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StateMachine.h"
+
 
 @interface dentakuViewController : UIViewController{
-    double x;
-    double y;
-    double z;
-    int n;
-    int shou;
-    int answear;
-    int keisan;
-    double w;
-    double s;
-    double r;
+    
+    
+    double A;
+    double B;
+    
 }
-@property (weak, nonatomic) IBOutlet UITextField *screen;
-@property enum{x,y} state;
+@property StateMachine* model;
 
-- (IBAction)AC:(id)sender;
-- (IBAction)minas:(id)sender;
-- (IBAction)kake:(id)sender;
-- (IBAction)waru:(id)sender;
-- (IBAction)plus:(id)sender;
-- (IBAction)equal:(id)sender;
-- (IBAction)nine:(id)sender;
-- (IBAction)eight:(id)sender;
-- (IBAction)seven:(id)sender;
-- (IBAction)six:(id)sender;
-- (IBAction)five:(id)sender;
-- (IBAction)four:(id)sender;
-- (IBAction)three:(id)sender;
-- (IBAction)two:(id)sender;
-- (IBAction)one:(id)sender;
-- (IBAction)zero:(id)sender;
-- (IBAction)dot:(id)sender;
-
+@property enum {x,y} state;
+@property (weak, nonatomic) IBOutlet UILabel *result;
+- (IBAction)zero:(id)sender;//0
+- (IBAction)dot:(id)sender;//小数点
+- (IBAction)equal:(id)sender;//=
+- (IBAction)one:(id)sender;//1
+- (IBAction)two:(id)sender;//2
+- (IBAction)three:(id)sender;//3
+- (IBAction)four:(id)sender;//4
+- (IBAction)five:(id)sender;//5
+- (IBAction)six:(id)sender;//6
+- (IBAction)plus:(id)sender;//+
+- (IBAction)seven:(id)sender;//7
+- (IBAction)eight:(id)sender;//8
+- (IBAction)nine:(id)sender;//9
+- (IBAction)minus:(id)sender;//-
+- (IBAction)AC:(id)sender;//AC
+- (IBAction)waru:(id)sender;//÷
+- (IBAction)multiply:(id)sender;//×
 @end
